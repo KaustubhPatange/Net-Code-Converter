@@ -113,10 +113,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CodeConvert">
-      <HintPath>..\..\..\..\UNCOMPLETED WORKS\Convrt From C To VB.NET And Reverse\Convrt From C To VB.NET And Reverse\Convrt From C To VB.NET And Reverse\bin\Debug\CodeConvert.dll</HintPath>
+      <HintPath>bin\Debug\CodeConvert.dll</HintPath>
     </Reference>
     <Reference Include="FastColoredTextBox">
-      <HintPath>..\..\..\..\..\Desktop\FastColoredTextBox.dll</HintPath>
+      <HintPath>..\..\..\..\Libraries\FastColoredTextBox.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -181,9 +181,11 @@
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Form4.resx">
       <DependentUpon>Form4.vb</DependentUpon>
@@ -213,6 +215,7 @@
     <None Include="Resources\QuickView-icon.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\refresh.png" />
     <Content Include="Thehoth-Seo-Seo-web-code.ico" />
   </ItemGroup>
   <ItemGroup>

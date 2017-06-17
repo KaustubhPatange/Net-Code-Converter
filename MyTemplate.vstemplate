@@ -1,18 +1,17 @@
 <VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
   <TemplateData>
-    <Name>Code Convert</Name>
+    <Name>Convert</Name>
     <Description>.Net Code Converter i.e From C# to VB.Net and vice-versa</Description>
     <ProjectType>VisualBasic</ProjectType>
     <ProjectSubType>
     </ProjectSubType>
     <SortOrder>1000</SortOrder>
     <CreateNewFolder>true</CreateNewFolder>
-    <DefaultName>Code Convert</DefaultName>
+    <DefaultName>Convert</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>
     <LocationField>Enabled</LocationField>
     <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
     <Icon>__TemplateIcon.ico</Icon>
-    <PreviewImage>__PreviewImage.PNG</PreviewImage>
   </TemplateData>
   <TemplateContent>
     <Project TargetFileName="Convert.vbproj" File="Convert.vbproj" ReplaceParameters="true">
@@ -39,6 +38,7 @@
       </Folder>
       <Folder Name="Resources" TargetFolderName="Resources">
         <ProjectItem ReplaceParameters="false" TargetFileName="QuickView-icon.png">QuickView-icon.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="refresh.png">refresh.png</ProjectItem>
       </Folder>
       <ProjectItem ReplaceParameters="false" TargetFileName="Thehoth-Seo-Seo-web-code.ico">Thehoth-Seo-Seo-web-code.ico</ProjectItem>
     </Project>

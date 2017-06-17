@@ -104,6 +104,8 @@ Public Class Form1
                 a = "VB Files|*.vb|All Files|*.*"
             ElseIf FileExtension = ".vb" Then
                 a = "C# Files|*.cs|All Files|*.*"
+            Else
+                a = "All Files|*.*"
             End If
             SaveFileDialog1.Title = "Browse for Code Save Path"
             SaveFileDialog1.Filter = a
@@ -206,6 +208,28 @@ Public Class Form1
 
     Private Sub OpenSourceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenSourceToolStripMenuItem.Click
         Process.Start("https://github.com/KaustubhPatange/Net-Code-Converter")
+    End Sub
+
+    Private Sub ToolStripButton6_Click(sender As Object, e As EventArgs) Handles ToolStripButton6.Click, RefreshCodeToolStripMenuItem.Click
+        Dim temp = Editor1.Text
+        Editor1.Text = ""
+        If CToVBNetToolStripMenuItem.Checked = True Then
+            Editor1.Language = Language.CSharp
+        End If
+        If VBNetToCToolStripMenuItem.Checked = True Then
+            Editor1.Language = Language.VB
+        End If
+        Editor1.Text = temp
+    End Sub
+
+    Private Sub LoadTemplateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LoadTemplateToolStripMenuItem.Click
+        If VBNetToCToolStripMenuItem.Checked = True Then
+            Editor1.Text = "Imports System" + Environment.NewLine + "Imports System.IO" + Environment.NewLine + "Public Class TestForm" + Environment.NewLine + Environment.NewLine + "End Class"
+        End If
+        If CToVBNetToolStripMenuItem.Checked = True Then
+            Editor1.Text = "using system;" + Environment.NewLine + "using system.IO;" + Environment.NewLine + "public class TestForm" + Environment.NewLine + "{" + Environment.NewLine + Environment.NewLine + "}"
+
+        End If
     End Sub
 
     Private Sub ImportCodeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ImportCodeToolStripMenuItem.Click

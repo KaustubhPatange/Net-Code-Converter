@@ -45,15 +45,18 @@ Partial Class Form1
         Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton4 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton5 = New System.Windows.Forms.ToolStripButton()
-        Me.Editor1 = New FastColoredTextBoxNS.FastColoredTextBox()
+        Me.ToolStripButton6 = New System.Windows.Forms.ToolStripButton()
         Me.Label1 = New System.Windows.Forms.ToolStrip()
         Me.Label2 = New System.Windows.Forms.ToolStripLabel()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
+        Me.Editor1 = New FastColoredTextBoxNS.FastColoredTextBox()
+        Me.RefreshCodeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LoadTemplateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
-        CType(Me.Editor1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Label1.SuspendLayout()
+        CType(Me.Editor1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -67,7 +70,7 @@ Partial Class Form1
         '
         'FileToolStripMenuItem
         '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewProjectToolStripMenuItem, Me.ImportCodeToolStripMenuItem, Me.SaveProjectToolStripMenuItem, Me.ViewCodeToolStripMenuItem, Me.ExitToolStripMenuItem})
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewProjectToolStripMenuItem, Me.ImportCodeToolStripMenuItem, Me.SaveProjectToolStripMenuItem, Me.RefreshCodeToolStripMenuItem, Me.ViewCodeToolStripMenuItem, Me.ExitToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "&File"
@@ -111,7 +114,7 @@ Partial Class Form1
         '
         'ConvertToolStripMenuItem
         '
-        Me.ConvertToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VBNetToCToolStripMenuItem, Me.CToVBNetToolStripMenuItem, Me.GenerateToolStripMenuItem})
+        Me.ConvertToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VBNetToCToolStripMenuItem, Me.CToVBNetToolStripMenuItem, Me.GenerateToolStripMenuItem, Me.LoadTemplateToolStripMenuItem})
         Me.ConvertToolStripMenuItem.Name = "ConvertToolStripMenuItem"
         Me.ConvertToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
         Me.ConvertToolStripMenuItem.Text = "&$safeprojectname$"
@@ -122,21 +125,21 @@ Partial Class Form1
         Me.VBNetToCToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.VBNetToCToolStripMenuItem.Image = Global.$safeprojectname$.My.Resources.Resources.prog_vbnet
         Me.VBNetToCToolStripMenuItem.Name = "VBNetToCToolStripMenuItem"
-        Me.VBNetToCToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
+        Me.VBNetToCToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.VBNetToCToolStripMenuItem.Text = "VB.Net to C#"
         '
         'CToVBNetToolStripMenuItem
         '
         Me.CToVBNetToolStripMenuItem.Image = Global.$safeprojectname$.My.Resources.Resources.c_sharp1
         Me.CToVBNetToolStripMenuItem.Name = "CToVBNetToolStripMenuItem"
-        Me.CToVBNetToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
+        Me.CToVBNetToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.CToVBNetToolStripMenuItem.Text = "C# to VB.Net"
         '
         'GenerateToolStripMenuItem
         '
         Me.GenerateToolStripMenuItem.Image = Global.$safeprojectname$.My.Resources.Resources.Generate_keys_icon
         Me.GenerateToolStripMenuItem.Name = "GenerateToolStripMenuItem"
-        Me.GenerateToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
+        Me.GenerateToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.GenerateToolStripMenuItem.Text = "Generate"
         '
         'HelpToolStripMenuItem
@@ -150,26 +153,26 @@ Partial Class Form1
         '
         Me.VisitWebpageToolStripMenuItem.Image = Global.$safeprojectname$.My.Resources.Resources._14575
         Me.VisitWebpageToolStripMenuItem.Name = "VisitWebpageToolStripMenuItem"
-        Me.VisitWebpageToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.VisitWebpageToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
         Me.VisitWebpageToolStripMenuItem.Text = "Visit Webpage"
         '
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Image = Global.$safeprojectname$.My.Resources.Resources.circle_with_i_1
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
         Me.AboutToolStripMenuItem.Text = "About "
         '
         'OpenSourceToolStripMenuItem
         '
         Me.OpenSourceToolStripMenuItem.Image = Global.$safeprojectname$.My.Resources.Resources.opensource_logo
         Me.OpenSourceToolStripMenuItem.Name = "OpenSourceToolStripMenuItem"
-        Me.OpenSourceToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.OpenSourceToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
         Me.OpenSourceToolStripMenuItem.Text = "Open Source"
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripButton3, Me.ToolStripButton4, Me.ToolStripButton5})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripButton3, Me.ToolStripButton4, Me.ToolStripButton5, Me.ToolStripButton6})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 24)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0)
@@ -221,28 +224,14 @@ Partial Class Form1
         Me.ToolStripButton5.Size = New System.Drawing.Size(23, 22)
         Me.ToolStripButton5.Text = "View Code"
         '
-        'Editor1
+        'ToolStripButton6
         '
-        Me.Editor1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Editor1.AutoCompleteBracketsList = New Char() {Global.Microsoft.VisualBasic.ChrW(40), Global.Microsoft.VisualBasic.ChrW(41), Global.Microsoft.VisualBasic.ChrW(123), Global.Microsoft.VisualBasic.ChrW(125), Global.Microsoft.VisualBasic.ChrW(91), Global.Microsoft.VisualBasic.ChrW(93), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(39), Global.Microsoft.VisualBasic.ChrW(39)}
-        Me.Editor1.AutoScrollMinSize = New System.Drawing.Size(27, 14)
-        Me.Editor1.BackBrush = Nothing
-        Me.Editor1.CharHeight = 14
-        Me.Editor1.CharWidth = 8
-        Me.Editor1.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Editor1.DisabledColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer))
-        Me.Editor1.Font = New System.Drawing.Font("Courier New", 9.75!)
-        Me.Editor1.IsReplaceMode = False
-        Me.Editor1.Location = New System.Drawing.Point(0, 52)
-        Me.Editor1.Name = "Editor1"
-        Me.Editor1.Paddings = New System.Windows.Forms.Padding(0)
-        Me.Editor1.SelectionColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Editor1.ServiceColors = CType(resources.GetObject("Editor1.ServiceColors"), FastColoredTextBoxNS.ServiceColors)
-        Me.Editor1.Size = New System.Drawing.Size(710, 352)
-        Me.Editor1.TabIndex = 2
-        Me.Editor1.Zoom = 100
+        Me.ToolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton6.Image = Global.$safeprojectname$.My.Resources.Resources.refresh
+        Me.ToolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton6.Name = "ToolStripButton6"
+        Me.ToolStripButton6.Size = New System.Drawing.Size(23, 22)
+        Me.ToolStripButton6.Text = "Refresh"
         '
         'Label1
         '
@@ -260,13 +249,46 @@ Partial Class Form1
         Me.Label2.Size = New System.Drawing.Size(39, 22)
         Me.Label2.Text = "Ready"
         '
+        'Editor1
+        '
+        Me.Editor1.AutoCompleteBracketsList = New Char() {Global.Microsoft.VisualBasic.ChrW(40), Global.Microsoft.VisualBasic.ChrW(41), Global.Microsoft.VisualBasic.ChrW(123), Global.Microsoft.VisualBasic.ChrW(125), Global.Microsoft.VisualBasic.ChrW(91), Global.Microsoft.VisualBasic.ChrW(93), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(34), Global.Microsoft.VisualBasic.ChrW(39), Global.Microsoft.VisualBasic.ChrW(39)}
+        Me.Editor1.AutoScrollMinSize = New System.Drawing.Size(27, 14)
+        Me.Editor1.BackBrush = Nothing
+        Me.Editor1.CharHeight = 14
+        Me.Editor1.CharWidth = 8
+        Me.Editor1.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.Editor1.DisabledColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer))
+        Me.Editor1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Editor1.IsReplaceMode = False
+        Me.Editor1.Location = New System.Drawing.Point(0, 49)
+        Me.Editor1.Name = "Editor1"
+        Me.Editor1.Paddings = New System.Windows.Forms.Padding(0)
+        Me.Editor1.SelectionColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Editor1.ServiceColors = CType(resources.GetObject("Editor1.ServiceColors"), FastColoredTextBoxNS.ServiceColors)
+        Me.Editor1.Size = New System.Drawing.Size(710, 358)
+        Me.Editor1.TabIndex = 4
+        Me.Editor1.Zoom = 100
+        '
+        'RefreshCodeToolStripMenuItem
+        '
+        Me.RefreshCodeToolStripMenuItem.Image = Global.$safeprojectname$.My.Resources.Resources.refresh
+        Me.RefreshCodeToolStripMenuItem.Name = "RefreshCodeToolStripMenuItem"
+        Me.RefreshCodeToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
+        Me.RefreshCodeToolStripMenuItem.Text = "Refresh Code"
+        '
+        'LoadTemplateToolStripMenuItem
+        '
+        Me.LoadTemplateToolStripMenuItem.Name = "LoadTemplateToolStripMenuItem"
+        Me.LoadTemplateToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
+        Me.LoadTemplateToolStripMenuItem.Text = "Load Template"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(710, 432)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Editor1)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -277,9 +299,9 @@ Partial Class Form1
         Me.MenuStrip1.PerformLayout()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
-        CType(Me.Editor1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Label1.ResumeLayout(False)
         Me.Label1.PerformLayout()
+        CType(Me.Editor1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -304,11 +326,14 @@ Partial Class Form1
     Friend WithEvents ToolStripButton3 As ToolStripButton
     Friend WithEvents ToolStripButton4 As ToolStripButton
     Friend WithEvents GenerateToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents Editor1 As FastColoredTextBoxNS.FastColoredTextBox
     Friend WithEvents Label1 As ToolStrip
     Friend WithEvents Label2 As ToolStripLabel
     Friend WithEvents ViewCodeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripButton5 As ToolStripButton
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents SaveFileDialog1 As SaveFileDialog
+    Friend WithEvents Editor1 As FastColoredTextBoxNS.FastColoredTextBox
+    Friend WithEvents ToolStripButton6 As ToolStripButton
+    Friend WithEvents RefreshCodeToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LoadTemplateToolStripMenuItem As ToolStripMenuItem
 End Class
