@@ -3,10 +3,11 @@
 
 ![Alt text](https://github.com/KaustubhPatange/Net-Code-Converter/raw/master/__PreviewImage.PNG "Image 1")
 
-# Instructions 
+# Using Code
 
-* To Use This Tool from this source, you need to Compile all batch files it into exe format.
-* For Newbies to download source click on the Clone or Download button and then Download as ZIP, in android make sure you switch to desktop version to do the same process.
+* Clone the repo `https://github.com/KaustubhPatange/Net-Code-Converter.git`
+* Open the project in Visual studio 2015 or above.
+* If you get a dependency missing error. Add <b>FastColoredTextBox</b> from nuget packages.
 
 # License
 ```
